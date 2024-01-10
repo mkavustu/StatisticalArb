@@ -10,7 +10,7 @@ def get_historical_Data(tickers):
     data = pd.DataFrame()
     names = list()
     for i in tickers:
-        data = pd.concat([data, pd.DataFrame(yf.download(i, start=datetime(2020, 8, 26), end=datetime(2022, 8, 26)).iloc[:,4])], axis = 1)
+        data = pd.concat([data, pd.DataFrame(yf.download(i, start=datetime(2020, 8, 26), end=datetime(2023, 8, 26)).iloc[:,4])], axis = 1)
         names.append(i)
     data.columns = names
     return data

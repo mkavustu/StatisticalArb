@@ -5,7 +5,7 @@ import somefncs as sf
 
 from statsmodels.tsa.stattools import adfuller
 
-ticks = ["DPZ", "AAPL", "GOOG", "AMD", "GME", "SPY", "NFLX", "BA", "WMT","TWTR","GS","XOM","NKE","FE", "META","BRK-B", "MSFT"] #Name of company (Dominos pizza)
+ticks = ["DPZ", "AAPL", "GOOG", "AMD", "GME", "SPY", "NFLX", "BA", "WMT","GS","XOM","NKE","FE", "META","BRK-B", "MSFT"] #Name of company (Dominos pizza)
 d = sf.get_historical_Data(ticks)
 # print(d.shape)
 # Most Recent Data
