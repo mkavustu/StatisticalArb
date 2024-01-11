@@ -5,7 +5,7 @@ import somefncs as sf
 
 from statsmodels.tsa.stattools import adfuller
 
-ticks = ["DPZ", "AAPL", "GOOG", "AMD", "GME", "SPY", "NFLX", "BA", "WMT","GS","XOM","NKE","FE", "META","BRK-B", "MSFT"] #Name of company (Dominos pizza)
+ticks = ["DPZ", "AAPL", "GOOG", "AMD", "GME", "SPY", "NFLX", "BA", "WMT","GS","XOM","NKE","FE", "META","BRK-B", "MSFT"]
 d = sf.get_historical_Data(ticks)
 # print(d.shape)
 # Most Recent Data
@@ -105,7 +105,7 @@ plt.title('Z score of GS/GOOG')
 plt.figure(figsize=(8, 6), dpi=200)
 # here a low pass filter, but any causal filter can be chosen depending on the application
 ratios_mavg5 = ratio.rolling(window=5, center=False).mean()
-# looks at the average ratio of the past n=20 days
+# looks at the average ratio of the past n=5 days
 ratios_mavg20 = ratio.rolling(window=20, center=False).mean()
 # standard deviation of the ratio of past n=20 days
 std_20 = ratio.rolling(window=20, center=False).std()
